@@ -3,17 +3,17 @@ using UnityEngine.UI;
 
 public class DeathScreen : MonoBehaviour
 {
-    public GameObject deathPanel; // Panel с текстом "YOU DIED"
+    public GameObject deathPanel; 
 
     void Start()
     {
         if (deathPanel != null)
-            deathPanel.SetActive(false); // Скрыть экран в начале
+            deathPanel.SetActive(false); 
     }
 
     public void ShowDeathScreen()
     {
         if (deathPanel != null)
-            deathPanel.SetActive(true); // Показываем экран
+            deathPanel.SetActive(true); 
     }
 }
