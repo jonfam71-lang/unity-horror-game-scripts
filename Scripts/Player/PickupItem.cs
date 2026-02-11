@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PickupItem : MonoBehaviour
 {
-    public GameObject weaponInHand; // объект в руках игрока
+    public GameObject weaponInHand; 
 
 
     bool canPickUp = false;
@@ -28,8 +28,8 @@ public class PickupItem : MonoBehaviour
 
     void PickUp()
     {
-        weaponInHand.SetActive(true); // включаем модель в руках
-        gameObject.SetActive(false); // убираем лежащий топор
+        weaponInHand.SetActive(true); /
+        gameObject.SetActive(false); 
     }
 }
 
