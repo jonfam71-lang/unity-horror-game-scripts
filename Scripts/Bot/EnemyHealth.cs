@@ -14,7 +14,7 @@ public class EnemyHealth : MonoBehaviour
     private NavMeshAgent agent;
     private Renderer rend;
     private Material mat;
-    public float dissolveSpeed = 1f; // скорость растворения
+    public float dissolveSpeed = 1f; 
 
     void Start()
     {
@@ -23,7 +23,7 @@ public class EnemyHealth : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         rend = GetComponentInChildren<Renderer>();
         if (rend != null)
-            mat = rend.material; // экземпляр материала для этого врага
+            mat = rend.material; 
     }
 
     public void TakeDamage(int damage, Vector3 hitPoint)
@@ -46,21 +46,19 @@ public class EnemyHealth : MonoBehaviour
         if (isDead) return;
         isDead = true;
 
-        animator.SetTrigger("Die");      // проигрываем анимацию
+        animator.SetTrigger("Die");     
         if (agent != null) agent.enabled = false;
         GetComponent<Collider>().enabled = false;
 
-        // запускаем dissolve через корутину
         if (mat != null)
             StartCoroutine(DelayedDissolve());
     }
 
     private IEnumerator DelayedDissolve()
     {
-        // 🔹 2 секунды ждем анимацию смерти
+
         yield return new WaitForSeconds(3f);
 
-        // 🔹 После задержки запускаем dissolve
         float dissolve = 0f;
         while (dissolve < 1f)
         {
