@@ -40,7 +40,6 @@ public class EnemyAI : MonoBehaviour
         else
             Attack();
 
-        // ❗ если атакует — скорость 0
         animator.SetFloat("Speed", isAttacking ? 0f : agent.velocity.magnitude);
     }
 
@@ -89,7 +88,6 @@ public class EnemyAI : MonoBehaviour
         );
     }
 
-    // 🔥 ВЫЗЫВАЕТСЯ ИЗ Animation Event В КОНЦЕ АТАКИ
     public void EndAttack()
     {
         isAttacking = false;
