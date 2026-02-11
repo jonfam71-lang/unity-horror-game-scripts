@@ -13,14 +13,12 @@ public class SwordHit : MonoBehaviour
         hitCollider.enabled = false;
     }
 
-    // גûחûגאועסÿ טח ְְָּֽײָָ
     public void EnableHit()
     {
         hitCollider.enabled = true;
         Debug.Log("HIT ON");
     }
 
-    // גûחûגאועסÿ טח ְְָּֽײָָ
     public void DisableHit()
     {
         hitCollider.enabled = false;
