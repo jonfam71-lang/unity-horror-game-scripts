@@ -21,7 +21,6 @@ public class Door : MonoBehaviour
 
     public void TryOpen(PlayerInventory playerInventory)
     {
-        // если ключ нужен, а игрока нет нужного ключа
         if (keyID != 0 && !playerInventory.HasKey(keyID))
         {
             Debug.Log("Дверь заперта! Нужен ключ ID: " + keyID);
